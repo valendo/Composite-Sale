@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GeneratedTypeWhiteListElementsElements>
+  <GeneratedTypeWhiteListElements TypeManagerTypeName="My.Sale.Categories" />
+  <GeneratedTypeWhiteListElements TypeManagerTypeName="My.Sale.Category" />
+  <GeneratedTypeWhiteListElements TypeManagerTypeName="My.Sale.Product" />
+  <GeneratedTypeWhiteListElements TypeManagerTypeName="My.Sale.Products" />
+</GeneratedTypeWhiteListElementsElements>

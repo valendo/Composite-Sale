@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CategoryElements>
+  <Category Id="352016de-6cf6-41e7-81c2-8a8cf12cc53e" CategoryName="Laptop" CultureName="vi-VN" SourceCultureName="vi-VN" Parent="00000000-0000-0000-0000-000000000000" />
+  <Category Id="4f37c874-6b88-4d4d-bfa7-1c5388c0df2f" CategoryName="Mobile" CultureName="vi-VN" SourceCultureName="vi-VN" Parent="00000000-0000-0000-0000-000000000000" />
+  <Category Id="725665a5-a778-4217-8951-f38daf76eaf6" CategoryName="HTC" CultureName="vi-VN" SourceCultureName="vi-VN" Parent="4f37c874-6b88-4d4d-bfa7-1c5388c0df2f" />
+  <Category Id="779a05e7-4b1e-478d-9c37-765efe386305" CategoryName="USB" CultureName="vi-VN" SourceCultureName="vi-VN" Parent="edfd57cf-849f-430b-8898-e2e607c891a4" />
+  <Category Id="830ef1cc-cf02-4cc7-b123-96b901c6249f" CategoryName="Mouse" CultureName="vi-VN" SourceCultureName="vi-VN" Parent="edfd57cf-849f-430b-8898-e2e607c891a4" />
+  <Category Id="a4dcc311-9f6c-469a-9883-913f28f44216" CategoryName="Dell" CultureName="vi-VN" SourceCultureName="vi-VN" Parent="352016de-6cf6-41e7-81c2-8a8cf12cc53e" />
+  <Category Id="a618e9b3-f384-4064-8da7-eb229349e75f" CategoryName="Keyboard" CultureName="vi-VN" SourceCultureName="vi-VN" Parent="edfd57cf-849f-430b-8898-e2e607c891a4" />
+  <Category Id="bfc68354-31a9-43f0-bc71-9142e484786e" CategoryName="Sony" CultureName="vi-VN" SourceCultureName="vi-VN" Parent="352016de-6cf6-41e7-81c2-8a8cf12cc53e" />
+  <Category Id="edfd57cf-849f-430b-8898-e2e607c891a4" CategoryName="Accessories" CultureName="vi-VN" SourceCultureName="vi-VN" Parent="00000000-0000-0000-0000-000000000000" />
+  <Category Id="ffff5820-cc39-4e28-8c39-def2548a20b8" CategoryName="Apple" CultureName="vi-VN" SourceCultureName="vi-VN" Parent="4f37c874-6b88-4d4d-bfa7-1c5388c0df2f" />
+</CategoryElements>

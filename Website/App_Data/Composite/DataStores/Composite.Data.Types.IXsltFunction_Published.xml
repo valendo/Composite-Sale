@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XsltFunctionElementsElements>
+  <XsltFunctionElements Id="17bacb8e-73cc-4b87-bec1-31bacabd538c" Name="DropDown" Namespace="Composite.Navigation" Description="Navigation DropDown Menu" OutputXmlSubType="XHTML" XslFilePath="\Composite\Navigation\DropDown.xsl" />
+  <XsltFunctionElements Id="91592040-2f83-4c5c-8a81-788e6b454a9e" Name="Menu" Namespace="Layout.Navigation" Description="" OutputXmlSubType="XHTML" XslFilePath="\Layout\Navigation\Menu.xsl" />
+  <XsltFunctionElements Id="e2a81fd2-4f73-4152-bf2a-a257426e2401" Name="TopLinks" Namespace="Layout.Navigation" Description="" OutputXmlSubType="XHTML" XslFilePath="\Layout\Navigation\TopLinks.xsl" />
+</XsltFunctionElementsElements>

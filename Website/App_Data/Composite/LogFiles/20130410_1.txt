@@ -1,0 +1,31 @@
+﻿20130410 22:33:43.0295 4 14 Error FileBasedFunctionProvider  Error instantiating CategoryMenu function
+20130410 22:33:43.0925 4 14 Error FileBasedFunctionProvider  System.Web.HttpParseException (0x80004005): The file '/sale/App_Data/UserControls/My/Sale/Test.ascx.cs' does not exist. ---> System.Web.HttpParseException (0x80004005): The file '/sale/App_Data/UserControls/My/Sale/Test.ascx.cs' does not exist. ---> System.Web.HttpException (0x80004005): The file '/sale/App_Data/UserControls/My/Sale/Test.ascx.cs' does not exist.
+   at System.Web.UI.TemplateParser.ProcessCodeFile(VirtualPath codeFileVirtualPath)
+   at System.Web.UI.TemplateParser.ProcessMainDirectiveAttribute(String deviceName, String name, String value, IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResult(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at Composite.Plugins.Functions.FunctionProviders.UserControlFunctionProvider.UserControlFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130410 22:33:43.0945 4 14 Error FileBasedFunctionProvider | INNER  System.Web.HttpParseException (0x80004005): The file '/sale/App_Data/UserControls/My/Sale/Test.ascx.cs' does not exist. ---> System.Web.HttpException (0x80004005): The file '/sale/App_Data/UserControls/My/Sale/Test.ascx.cs' does not exist.
+   at System.Web.UI.TemplateParser.ProcessCodeFile(VirtualPath codeFileVirtualPath)
+   at System.Web.UI.TemplateParser.ProcessMainDirectiveAttribute(String deviceName, String name, String value, IDictionary parseData)
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+20130410 22:33:43.0955 4 14 Error FileBasedFunctionProvider | INNER | INNER  System.Web.HttpException (0x80004005): The file '/sale/App_Data/UserControls/My/Sale/Test.ascx.cs' does not exist.
+   at System.Web.UI.TemplateParser.ProcessCodeFile(VirtualPath codeFileVirtualPath)
+   at System.Web.UI.TemplateParser.ProcessMainDirectiveAttribute(String deviceName, String name, String value, IDictionary parseData)
+20130410 22:34:08.6019 4  9 Error PageRenderer  System.ArgumentException: The Function named 'My.Sale.Test' is not known. Ensur
