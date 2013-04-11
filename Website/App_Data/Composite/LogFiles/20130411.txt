@@ -1,0 +1,85 @@
+﻿20130411 08:35:12.8323 25 65 Warning ConsoleMessageServiceFacade  Console 'key978194412542507' has a last known change numer of 285, but server current number is 1.
+20130411 08:35:15.1685 25 47 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 08:37:22.8628 25 21 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 08:39:36.3184 25 21 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: 
+20130411 08:43:28.1937 25 35 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: 
+20130411 08:44:01.9396 25 104 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 08:44:43.2589 25 13 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: 
+20130411 08:45:18.6840 25 104 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 08:48:40.2295 25 13 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 25 ended at 08:48:40:22 in process 10492
+20130411 08:52:09.0634 26 65 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 09:23:47.7610 26 78 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 09:23:54.4424 26 21 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 09:24:20.1249 26 87 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 10:57:04.6122 26 80 Warning InstallRemotePackageWorkflow  System.ServiceModel.FaultException: Server was unable to process request. ---> Sequence contains more than one element
+
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Composite.Core.PackageSystem.WebServiceClient.PackagesSoap.RegisterPackageInstallationCompletion(RegisterPackageInstallationCompletionRequest request)
+   at Composite.Core.PackageSystem.PackageServerFacadeImpl.RegisterPackageInstallationCompletion(String packageServerUrl, Guid installationId, Guid packageId, String localUserName, String localUserIp)
+   at Composite.Plugins.Elements.ElementProviders.PackageElementProvider.InstallRemotePackageWorkflow.step4CodeActivity_Install_ExecuteCode(Object sender, EventArgs e)
+
+20130411 10:57:05.0772 26 35 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 26 ended at 10:57:05:05 in process 10492
+20130411 11:00:25.5327 28 65 Warning UninstallRemovePackageWorkflow  System.ServiceModel.FaultException: Server was unable to process request. ---> Sequence contains more than one element
+
+Server stack trace: 
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Composite.Core.PackageSystem.WebServiceClient.PackagesSoap.RegisterPackageUninstall(RegisterPackageUninstallRequest request)
+   at Composite.Core.PackageSystem.PackageServerFacadeImpl.RegisterPackageUninstall(String packageServerUrl, Guid installationId, Guid packageId, String localUserName, String localUserIp)
+   at Composite.Plugins.Elements.ElementProviders.PackageElementProvider.UninstallRemotePackageWorkflow.step2CodeActivity_Uninstall_ExecuteCode(Object sender, EventArgs e)
+
+20130411 11:00:25.8307 28 42 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 28 ended at 11:00:25:82 in process 10492
+20130411 11:03:29.1562 29 52 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 29 ended at 11:03:29:15 in process 10492
+20130411 11:06:00.1268 30 18 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:11:06.8093 30 52 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 30 ended at 11:11:06:80 in process 10492
+20130411 11:11:14.5218 31 49 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 31 ended at 11:11:14:52 in process 10492
+20130411 11:17:09.0101 32 61 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:24:13.4593 32 80 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:24:53.0226 32 42 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:24:55.2187 32 21 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:25:03.3692 32 42 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:26:11.1061 32 61 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:26:13.4292 32 49 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:26:24.6628 32 74 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:27:22.4791 32 35 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:27:25.0473 32 82 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:27:25.8813 32 78 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:29:40.5710 32 50 Error FileBasedFunctionProvider  Error instantiating CategoryMenuRazor function
+20130411 11:29:40.5840 32 50 Error FileBasedFunctionProvider  System.Web.HttpCompileException (0x80004005): c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\sale\fc534423\8ece8b31\App_Web_categorymenurazor.cshtml.71fb389d.gesjucbh.0.cs(65): error CS1513: } expected
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130411 11:31:12.1253 32 60 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:35:10.4749 32 80 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:36:00.5358 32 21 Warning /Renderers/Page.aspx  Failed to format output xhtml. Url: /sale
+20130411 11:37:57.7625 32 21 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 32 ended at 11:37:57:76 in process 10492
+20130411 11:38:09.9502 33 60 Warning ConsoleMessageServiceFacade  Console 'key24931771424598992' has a last known change numer of 164, but server current number is 1.
+20130411 11:42:22.3106 33 47 Warning PageUrlHelper  Failed to parse url '/sale/Renderers/Page.aspx?pageId='
+20130411 11:43:30.7065 33 80 Warning PageUrlHelper  Failed to parse url '/sale/Renderers/Page.aspx?pageId='
+20130411 13:14:58.9214 33 87 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 33 ended at 13:14:58:89 in process 10492
+20130411 13:15:35.4255 34 62 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 34 ended at 13:15:35:42 in process 10492
+20130411 13:16:27.8215 35  8 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 35 ended at 13:16:27:82 in process 10492
+20130411 13:17:22.7767 36 18 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 36 ended at 13:17:22:77 in process 10492
+20130411 13:19:46.8119 37 61 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 37 ended at 13:19:46:81 in process 10492

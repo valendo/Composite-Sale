@@ -1,2 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PageTypeMetaDataTypeLinkElements />
+<PageTypeMetaDataTypeLinkElementsElements>
+  <PageTypeMetaDataTypeLinkElements Id="85f3abbb-d44c-4c62-884d-5a558603dd96" PageTypeId="f7869eb2-7369-4eb2-af47-e3be261e92c7" DataTypeId="1159c025-6d5e-4ac2-ac3b-b46c4d304e5c" Name="MetaData" />
+</PageTypeMetaDataTypeLinkElementsElements>

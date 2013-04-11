@@ -1,0 +1,48 @@
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get  { return "A demo function that outputs a hello message."; }
+    }
+     
+    [FunctionParameter(DefaultValue = "World")]
+    public string Name { get; set; }
+
+
+    public void RecursiveCategory(List<My.Sale.Category> categories, ref System.Text.StringBuilder sb)
+    {
+        using (DataConnection Data = new DataConnection())
+        {
+            sb.Append("<ul>");
+            foreach (var item in categories)
+            {
+                sb.AppendFormat("<li><a href='{0}'>{1}</a>", "#", item.CategoryName);
+                var subCategories = Data.Get<My.Sale.Category>().Where(t => t.Parent == item.Id).ToList();
+                if (subCategories.Count > 0)
+                {
+                    RecursiveCategory(subCategories, ref sb);
+                }
+                sb.Append("</li>");
+            }
+            sb.Append("</ul>");
+        }
+    }
+}
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+    <div>
+        
+            @{
+                System.Text.StringBuilder sb1 = new System.Text.StringBuilder();
+                var categories = Data.Get<My.Sale.Category>().Where(t => t.Parent == Guid.Empty).ToList();
+                RecursiveCategory(categories, ref sb1);
+            }
+            @Html.Raw(sb1.ToString())
+    </div>
+</body>
+</html>

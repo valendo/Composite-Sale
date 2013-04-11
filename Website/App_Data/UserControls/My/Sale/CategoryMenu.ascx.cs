@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Composite.Functions;
 using System.Collections.Generic;
 using Composite.Data;
@@ -29,6 +29,7 @@ public partial class C1Function : Composite.AspNet.UserControlFunction
         }
     }
 
+
     public void RecursiveCategory(List<My.Sale.Category> categories, ref System.Text.StringBuilder sb)
     {
         using (DataConnection Data = new DataConnection())
@@ -42,10 +43,7 @@ public partial class C1Function : Composite.AspNet.UserControlFunction
                 {
                     RecursiveCategory(subCategories, ref sb);
                 }
-                else
-                {
-                    sb.Append("</li>");
-                }
+                sb.Append("</li>");
             }
             sb.Append("</ul>");
         }

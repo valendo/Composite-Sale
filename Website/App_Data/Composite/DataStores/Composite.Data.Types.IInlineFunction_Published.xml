@@ -1,2 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<InlineFunctionElementsElements />
+<InlineFunctionElementsElements>
+  <InlineFunctionElements Id="6d8ee561-c5b7-4d04-85c8-7c4872efcb79" Name="Inline" Namespace="My.Function" Description="" CodePath="My.Function.Inline.cs" />
+</InlineFunctionElementsElements>

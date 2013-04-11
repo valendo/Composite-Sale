@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XsltFunctionElementsElements>
+  <XsltFunctionElements Id="116b1c36-4cf4-46cc-8c9e-62f2bf79cc25" Name="SearchForm" Namespace="Composite.Search.SimplePageSearch" Description="Contains search form: input textbox and submit button" OutputXmlSubType="XHTML" XslFilePath="/Composite/Search/SimplePageSearch/SearchForm.xsl" />
   <XsltFunctionElements Id="17bacb8e-73cc-4b87-bec1-31bacabd538c" Name="DropDown" Namespace="Composite.Navigation" Description="Navigation DropDown Menu" OutputXmlSubType="XHTML" XslFilePath="\Composite\Navigation\DropDown.xsl" />
+  <XsltFunctionElements Id="4eafb5af-c1cf-42aa-b9fa-81a20b2bbd33" Name="YouTube" Namespace="Composite.Media" Description="Plays a YouTube video on your page using the specified video id." OutputXmlSubType="XHTML" XslFilePath="\Composite\Media\YouTube.xsl" />
+  <XsltFunctionElements Id="66b6b95c-f765-4f0d-bc00-4f57f962578c" Name="CategoriesMenu" Namespace="My.Sale" Description="" OutputXmlSubType="XHTML" XslFilePath="/My/Sale/CategoriesMenu.xsl" />
+  <XsltFunctionElements Id="7471a806-f069-4caf-948e-e9c64a0639e0" Name="SEORender" Namespace="My.Page" Description="" OutputXmlSubType="XHTML" XslFilePath="/My/Page/SEORender.xsl" />
   <XsltFunctionElements Id="91592040-2f83-4c5c-8a81-788e6b454a9e" Name="Menu" Namespace="Layout.Navigation" Description="" OutputXmlSubType="XHTML" XslFilePath="\Layout\Navigation\Menu.xsl" />
+  <XsltFunctionElements Id="d99f494f-04d3-4bfc-86ef-c0266990cd92" Name="Nabble" Namespace="Composite.Community.Forum" Description="Embeds a forum hosted on nabble.com" OutputXmlSubType="XHTML" XslFilePath="\Composite\Community\Forum\Nabble.xsl" />
+  <XsltFunctionElements Id="de33ce12-cd19-4e08-b39c-6fa7f28d5e83" Name="SearchResults" Namespace="Composite.Search.SimplePageSearch" Description="Search results rendering" OutputXmlSubType="XHTML" XslFilePath="\Composite\Search\SimplePageSearch\SearchResults.xsl" />
   <XsltFunctionElements Id="e2a81fd2-4f73-4152-bf2a-a257426e2401" Name="TopLinks" Namespace="Layout.Navigation" Description="" OutputXmlSubType="XHTML" XslFilePath="\Layout\Navigation\TopLinks.xsl" />
 </XsltFunctionElementsElements>

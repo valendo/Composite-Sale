@@ -1,2 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<InlineFunctionAssemblyReferenceElementsElements />
+<InlineFunctionAssemblyReferenceElementsElements>
+  <InlineFunctionAssemblyReferenceElements Id="0ebf9925-cdde-4893-8aec-653817fca147" Function="6d8ee561-c5b7-4d04-85c8-7c4872efcb79" Name="System.Web.dll" Location="System" />
+  <InlineFunctionAssemblyReferenceElements Id="749cd575-2ce8-4ddd-93d8-537484bc43ae" Function="6d8ee561-c5b7-4d04-85c8-7c4872efcb79" Name="System.Core.dll" Location="System" />
+  <InlineFunctionAssemblyReferenceElements Id="7c954ea7-f87e-48e0-8c65-2db1687c8c96" Function="6d8ee561-c5b7-4d04-85c8-7c4872efcb79" Name="Composite.dll" Location="Bin" />
+  <InlineFunctionAssemblyReferenceElements Id="9d1f0cc9-8f64-4b8d-833d-ecbf30ae0923" Function="6d8ee561-c5b7-4d04-85c8-7c4872efcb79" Name="Composite.Workflows.dll" Location="Bin" />
+  <InlineFunctionAssemblyReferenceElements Id="a5891c91-5b87-4502-8fd9-0e2ac8b4b4b5" Function="6d8ee561-c5b7-4d04-85c8-7c4872efcb79" Name="System.Xml.dll" Location="System" />
+  <InlineFunctionAssemblyReferenceElements Id="ed156507-b235-45d7-972d-ae7099c082b5" Function="6d8ee561-c5b7-4d04-85c8-7c4872efcb79" Name="System.dll" Location="System" />
+  <InlineFunctionAssemblyReferenceElements Id="ff0e621e-2183-4d85-9de5-bf09cb3791f6" Function="6d8ee561-c5b7-4d04-85c8-7c4872efcb79" Name="System.Xml.Linq.dll" Location="System" />
+</InlineFunctionAssemblyReferenceElementsElements>
