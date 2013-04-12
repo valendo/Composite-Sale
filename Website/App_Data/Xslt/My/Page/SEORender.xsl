@@ -7,8 +7,7 @@
 				</xsl:for-each>
 			</head>
 			<body>
-				<!-- markup placed here will be the output of this rendering -->
-				<xsl:value-of select="/in:inputs/in:result[@name='Inline']" />
+				
 			</body>
 		</html>
 	</xsl:template>

@@ -1,0 +1,1 @@
+﻿20130412 14:36:01.1272 48 78 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 48 ended at 14:36:01:12 in process 10492

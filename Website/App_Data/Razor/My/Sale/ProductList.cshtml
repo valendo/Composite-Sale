@@ -1,0 +1,46 @@
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get { return "A demo function that outputs a hello message."; }
+    }
+
+    [FunctionParameter(DefaultValue = "World")]
+    public string Name { get; set; }
+
+    Guid PathInfoGuid(int segment)
+    {
+        string pathInfo = Composite.Core.Routing.Pages.C1PageRoute.GetPathInfo() ?? string.Empty;
+        string[] segments = pathInfo.Split('/');
+        Guid guidValue;
+        Guid.TryParse(segments.Skip(segment + 1).FirstOrDefault(), out guidValue);
+        return guidValue;
+    }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+    <div>
+        @{
+            Composite.Core.Routing.Pages.C1PageRoute.RegisterPathInfoUsage();
+            Guid CategoryId = PathInfoGuid(0);
+            if (CategoryId != Guid.Empty)
+            {
+                var products = Data.Get<My.Sale.Product>().Where(t => t.Category == CategoryId).ToList();
+                if (products.Count > 0)
+                {
+                    foreach (var item in products)
+                    {
+                        <div>Name: @item.Name</div>    
+                        <div>Summary: item.Summary</div>    
+                        <div>Description: @Html.Raw(item.Description)</div>    
+                    }
+                }
+            }
+        }
+    </div>
+</body>
+</html>

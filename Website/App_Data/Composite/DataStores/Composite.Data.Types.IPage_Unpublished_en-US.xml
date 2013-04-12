@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageElementsElements>
+  <PageElements PublicationStatus="published" ChangeDate="2013-04-12T10:22:15.251398+07:00" ChangedBy="admin" CultureName="en-US" SourceCultureName="en-US" Id="9bdb7b6d-4e4f-41c9-bcc3-95b20bd8d796" TemplateId="9f096519-d21c-435e-b334-62224fde2ab3" PageTypeId="f7869eb2-7369-4eb2-af47-e3be261e92c7" Title="How to edit this website" MenuTitle="How to?" UrlTitle="How-to" FriendlyUrl="" Description="" />
+  <PageElements PublicationStatus="published" ChangeDate="2013-04-12T10:21:12.9728359+07:00" ChangedBy="admin" CultureName="en-US" SourceCultureName="en-US" Id="a3055286-0e90-4b04-99dd-fb1a61dde0bf" TemplateId="a270f819-0b5c-4f7e-9194-4b554043e4ab" PageTypeId="de22fed1-0729-4ad3-aa1c-6047e54bf429" Title="Front page" MenuTitle="Front page" UrlTitle="" FriendlyUrl="" Description="this is front page" />
+</PageElementsElements>

@@ -6,28 +6,9 @@
         get  { return "A demo function that outputs a hello message."; }
     }
      
-    [FunctionParameter(DefaultValue = "World")]
-    public string Name { get; set; }
-
-
-    public void RecursiveCategory(List<My.Sale.Category> categories, ref System.Text.StringBuilder sb)
-    {
-        using (DataConnection Data = new DataConnection())
-        {
-            sb.Append("<ul>");
-            foreach (var item in categories)
-            {
-                sb.AppendFormat("<li><a href='{0}'>{1}</a>", "#", item.CategoryName);
-                var subCategories = Data.Get<My.Sale.Category>().Where(t => t.Parent == item.Id).ToList();
-                if (subCategories.Count > 0)
-                {
-                    RecursiveCategory(subCategories, ref sb);
-                }
-                sb.Append("</li>");
-            }
-            sb.Append("</ul>");
-        }
-    }
+    [FunctionParameter(Label = "Product List Page")]
+    public DataReference<IPage> ProductListPage { get; set; }
+    
 }
 
 
@@ -36,13 +17,29 @@
 </head>
 <body>
     <div>
-        
-            @{
-                System.Text.StringBuilder sb1 = new System.Text.StringBuilder();
-                var categories = Data.Get<My.Sale.Category>().Where(t => t.Parent == Guid.Empty).ToList();
-                RecursiveCategory(categories, ref sb1);
-            }
-            @Html.Raw(sb1.ToString())
+        @{var categories = Data.Get<My.Sale.Category>().Where(t => t.Parent == Guid.Empty).ToList(); }
+        @RecursiveCategory(categories)
     </div>
 </body>
 </html>
+
+@helper RecursiveCategory(List<My.Sale.Category> categories)
+{
+    using (DataConnection Data = new DataConnection())
+    {
+        <ul>
+        @foreach (var item in categories)
+        {
+            <li><a href='@Html.C1().PageUrl(@ProductListPage.Data)/@item.Id'>@(item.CategoryName)</a>
+            @{
+                var subCategories = Data.Get<My.Sale.Category>().Where(t => t.Parent == item.Id).ToList();
+                if (subCategories.Count > 0)
+                {
+                    @RecursiveCategory(subCategories);
+                }
+            }
+            </li>
+        }
+        </ul>
+    }
+}

@@ -1,0 +1,111 @@
+﻿20130412 11:20:25.9470 41 35 Warning ConsoleMessageServiceFacade  Console 'key2696259191725403' has a last known change numer of 129, but server current number is 1.
+20130412 14:05:16.2397 41 41 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 41 ended at 14:05:16:22 in process 10492
+20130412 14:30:54.4427 42 81 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 42 ended at 14:30:54:44 in process 10492
+20130412 14:31:31.3218 43 59 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 43 ended at 14:31:31:32 in process 10492
+20130412 14:33:03.2970 44 17 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 44 ended at 14:33:03:29 in process 10492
+20130412 14:33:09.7474 44 64 Error FileBasedFunctionProvider  Error instantiating CategoryMenuRazor function
+20130412 14:33:10.0934 44 64 Error FileBasedFunctionProvider  System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Web.Compilation.BuildManager.BatchCompileWebDirectoryInternal(VirtualDirectory vdir, Boolean ignoreErrors)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130412 14:33:10.1304 44 64 Critical FunctionProviderRegistry  System.Threading.ThreadAbortException: Thread was being aborted.
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+   at Composite.Functions.Foundation.PluginFacades.FunctionProviderPluginFacade.Functions(String providerName)
+   at Composite.Functions.Foundation.FunctionContainer.OnGetFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn)
+
+20130412 14:33:10.1614 44 64 Critical GlobalInitializerFacade  ResourcesDirChangeOrDirectoryRename
+20130412 14:33:10.1664 44 64 Critical GlobalInitializerFacade  System.Threading.ThreadAbortException: Thread was being aborted.
+   at Composite.Functions.Foundation.FunctionContainer.OnGetFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn, Boolean fireEvents)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeAllFunctions(FunctionTypesToReturn functionTypesToReturn, Boolean fireUpdateEvents)
+   at Composite.Functions.Foundation.MetaFunctionProviderRegistryImpl.Initialize_PostDataTypes()
+   at Composite.GlobalInitializerFacade.DoInitialize()
+   at Composite.GlobalInitializerFacade.InitializeTheSystem()
+
+20130412 14:33:10.1694 44 64 Error FileBasedFunctionProvider  Failed to reload functions
+20130412 14:33:10.1724 44 64 Error FileBasedFunctionProvider  System.Threading.ThreadAbortException: Thread was being aborted.
+   at Composite.Functions.Foundation.FunctionContainer.OnGetFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn, Boolean fireEvents)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeAllFunctions(FunctionTypesToReturn functionTypesToReturn, Boolean fireUpdateEvents)
+   at Composite.Functions.Foundation.MetaFunctionProviderRegistryImpl.Initialize_PostDataTypes()
+   at Composite.GlobalInitializerFacade.DoInitialize()
+   at Composite.GlobalInitializerFacade.InitializeTheSystem()
+   at Composite.Functions.Foundation.MetaFunctionProviderRegistryImpl.ReinitializeFunctionFromProvider(String providerName)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.ReloadFunctions()
+20130412 14:33:10.4535 45 58 Error FileBasedFunctionProvider  Error instantiating CategoryMenuRazor function
+20130412 14:33:10.4675 45 58 Error FileBasedFunctionProvider  System.Web.HttpCompileException (0x80004005): d:\CompositeC1\Composite-Sale\Website\App_Data\Razor\My\Sale\CategoryMenuRazor.cshtml(19): error CS0234: The type or namespace name 'TestResource' does not exist in the namespace 'Resources' (are you missing an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130412 14:34:14.8791 45 81 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 45 ended at 14:34:14:87 in process 10492
+20130412 14:34:21.9235 46 58 Error FileBasedFunctionProvider  Error instantiating CategoryMenuRazor function
+20130412 14:34:21.9365 46 58 Error FileBasedFunctionProvider  System.Web.HttpCompileException (0x80004005): d:\CompositeC1\Composite-Sale\Website\App_Data\Razor\My\Sale\CategoryMenuRazor.cshtml(19): error CS0103: The name 'Resources' does not exist in the current context
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130412 14:34:33.8462 46 12 Error PageRenderer  System.InvalidOperationException: Failed to get value for function 'My.Sale.CategoryMenuRazor' 
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+   at Composite.Core.WebClient.Renderings.Page.PageRenderer.<>c__DisplayClass19.<ExecuteEmbeddedFunctions>b__15(Int32 i)
+20130412 14:34:33.8472 46 12 Error PageRenderer | INNER  System.InvalidOperationException: Function not loaded. Source '~/App_Data/Razor/My/Sale/CategoryMenuRazor.cshtml' ---> System.Web.HttpCompileException: d:\CompositeC1\Composite-Sale\Website\App_Data\Razor\My\Sale\CategoryMenuRazor.cshtml(19): error CS0103: The name 'Resources' does not exist in the current context
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+   --- End of inner exception stack trace ---
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.NotLoadedFileBasedFunction`1.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.Foundation.PluginFacades.FunctionWrapper.Execute(ParameterList parameters, FunctionContextContainer context)
+   at Composite.Functions.FunctionRuntimeTreeNode.GetValue(FunctionContextContainer contextContainer)
+20130412 14:34:33.8482 46 12 Error PageRenderer | INNER | INNER  System.Web.HttpCompileException (0x80004005): d:\CompositeC1\Composite-Sale\Website\App_Data\Razor\My\Sale\CategoryMenuRazor.cshtml(19): error CS0103: The name 'Resources' does not exist in the current context
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
+   at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130412 14:35:30.3625 46 56 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 46 ended at 14:35:30:36 in process 10492
+20130412 14:35:53.4518 47 59 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 47 ended at 14:35:53:44 in process 10492
+20130412 14:36:24.7656 49 72 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 49 ended at 14:36:24:75 in process 10492
+20130412 14:36:46.4858 50 95 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 50 ended at 14:36:46:48 in process 10492
+20130412 14:37:33.7695 51 41 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 51 ended at 14:37:33:76 in process 10492
+20130412 14:38:00.2100 52 85 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 52 ended at 14:38:00:20 in process 10492
+20130412 14:39:42.7869 53 79 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 53 ended at 14:39:42:78 in process 10492
+20130412 14:39:50.1893 54 31 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 54 ended at 14:39:50:18 in process 10492
+20130412 14:40:37.5870 55 90 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 55 ended at 14:40:37:58 in process 10492
+20130412 15:16:30.0461 56 85 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 56 ended at 15:16:30:04 in process 10492
+20130412 15:43:09.3936 57 41 Information ApplicationEventHandler RGB(205, 92, 92) AppDomain 57 ended at 15:43:09:39 in process 10492
