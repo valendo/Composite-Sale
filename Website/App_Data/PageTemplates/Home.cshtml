@@ -1,0 +1,40 @@
+﻿@inherits RazorPageTemplate
+
+@functions {
+    public override void Configure()
+    {
+        TemplateId = new Guid("DA53D580-0EA4-43B2-BFB1-ADBAE8089523");
+        TemplateTitle = "Homepage";
+        Layout = "Master.cshtml";
+    }
+
+    [Placeholder(Id = "content", IsDefault = true)]
+    public XhtmlDocument Content { get; set; }
+
+    [Placeholder(Id = "left")]
+    public XhtmlDocument Left { get; set; }
+
+    [Placeholder(Id = "right")]
+    public XhtmlDocument Right { get; set; }
+
+	}
+@{
+    Layout = "Master.cshtml";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+@*you can add template specific head elements here*@
+</head>
+<body id="homepage">
+    <div id="columnCenter">
+        @Markup(Content)
+    </div>
+    <div id="navColumnOne" class="columnLeft">
+        @Markup(Left)
+    </div>
+    <div id="navColumnTwo" class="columnRight">
+        @Markup(Right)
+    </div>
+    <div class="clearBoth"></div>
+</body>
+</html>

@@ -23,20 +23,31 @@
 <head>
 </head>
 <body>
-    <div>
+    <div class="centerBoxWrapper" id="whatsNew">
+		
         @{
             Composite.Core.Routing.Pages.C1PageRoute.RegisterPathInfoUsage();
             Guid CategoryId = PathInfoGuid(0);
             if (CategoryId != Guid.Empty)
             {
-                var products = Data.Get<My.Sale.Product>().Where(t => t.Category == CategoryId).ToList();
+                string categoryName = Data.Get<My.Sale.Category>().Where(t => t.Id == CategoryId).FirstOrDefault().CategoryName;
+                <h2 class="centerBoxHeading">@categoryName</h2>
+                var products = Data.Get<My.Sale.Product>().Where(t => t.Category.Contains(CategoryId.ToString())).ToList();
                 if (products.Count > 0)
                 {
                     foreach (var item in products)
                     {
-                        <div>Name: @item.Name</div>    
-                        <div>Summary: item.Summary</div>    
-                        <div>Description: @Html.Raw(item.Description)</div>    
+                        <div class="centerBoxContents">
+                            <a href="#">
+                                <img src="@Html.C1().MediaUrl(item.Image)" height="92" />
+                            </a>
+                            <br /> <a href="#">@item.Name</a> 
+                            <br /> <span class="normalprice">@item.Price</span>
+                        </div>
+                        if ((products.IndexOf(item) + 1) % 3 == 0)
+                        {
+                            <br class="clearBoth" />
+                        }
                     }
                 }
             }

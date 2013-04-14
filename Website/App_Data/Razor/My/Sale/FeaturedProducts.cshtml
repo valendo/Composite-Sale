@@ -1,0 +1,41 @@
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get  { return "A demo function that outputs a hello message."; }
+    }
+     
+    [FunctionParameter(DefaultValue = "World")]
+    public string Name { get; set; }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    </head>
+    <body>
+        <div class="centerBoxWrapper" id="whatsNew">
+			<h2 class="centerBoxHeading">Featured products</h2>
+            @{
+                var products = Data.Get<My.Sale.Product>().Where(t => t.IsFeatured == true).ToList();
+                if (products.Count > 0)
+                {
+                    foreach (var item in products)
+                    {
+                        <div class="centerBoxContents">
+                            <a href="#">
+                                <img src="@Html.C1().MediaUrl(item.Image)" height="92" />
+                            </a>
+                            <br /> <a href="#">@item.Name</a> 
+                            <br /> <span class="normalprice">@item.Price</span>
+                        </div>
+                        if ((products.IndexOf(item) + 1) % 3 == 0)
+                        {
+                            <br class="clearBoth" />
+                        }
+                    }
+                }
+            }
+        </div>
+    </body>
+</html>

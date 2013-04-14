@@ -30,7 +30,14 @@
 	<div class="container" id="wrapper">
 		<div class="row">
 			<div id="header" class="twelvecol last">
-				<div id="Logo">
+                <img src="~/frontend/images/header.jpg"/>
+				<div style="height: 105px;
+width: 300px;
+margin-bottom: 15px;
+background-image: url(../Images/headerlogo.png);
+background-repeat: no-repeat;
+background-position: left bottom;
+float: left;">
 					<a href="@HomePageNode.Url"></a>
 				</div>
 				@Html.C1().Function("Composite.Navigation.LanguageSwitcher", new { Mode = "TranslatedOrHomePages", ShowCurrent = false, Format = "NativeName" })

@@ -35,9 +35,19 @@ namespace My.Sale {
             set;
         }
         
+        [Composite.Data.ImmutableFieldIdAttribute("095c6b31-b706-47c9-9a68-f498ab6ebd71")]
+        [Composite.Data.StoreFieldTypeAttribute(Composite.Data.PhysicalStoreFieldType.LargeString)]
+        [Microsoft.Practices.EnterpriseLibrary.Validation.Validators.NotNullValidatorAttribute()]
+        [Composite.Data.FieldPositionAttribute(1)]
+        [Composite.Data.DefaultFieldStringValueAttribute("")]
+        string Category {
+            get;
+            set;
+        }
+        
         [Composite.Data.ImmutableFieldIdAttribute("9a742dd1-42b8-4715-bd14-4cf47829dfb5")]
         [Composite.Data.StoreFieldTypeAttribute(Composite.Data.PhysicalStoreFieldType.String, 1024, IsNullable=true)]
-        [Composite.Data.FieldPositionAttribute(1)]
+        [Composite.Data.FieldPositionAttribute(2)]
         [Composite.Data.Validation.Validators.NullStringLengthValidatorAttribute(0, 1024)]
         string Summary {
             get;
@@ -46,7 +56,7 @@ namespace My.Sale {
         
         [Composite.Data.ImmutableFieldIdAttribute("ba09cf37-eb6e-41d5-a46a-474ded31d4ec")]
         [Composite.Data.StoreFieldTypeAttribute(Composite.Data.PhysicalStoreFieldType.LargeString, IsNullable=true)]
-        [Composite.Data.FieldPositionAttribute(2)]
+        [Composite.Data.FieldPositionAttribute(3)]
         string Description {
             get;
             set;
@@ -54,7 +64,7 @@ namespace My.Sale {
         
         [Composite.Data.ImmutableFieldIdAttribute("a0c56a6c-e5be-41be-8ad6-dde4131e0b27")]
         [Composite.Data.StoreFieldTypeAttribute(Composite.Data.PhysicalStoreFieldType.Decimal, 10, 2, IsNullable=true)]
-        [Composite.Data.FieldPositionAttribute(3)]
+        [Composite.Data.FieldPositionAttribute(4)]
         [Composite.Data.Validation.Validators.DecimalPrecisionValidatorAttribute(2)]
         System.Nullable<decimal> Price {
             get;
@@ -63,7 +73,7 @@ namespace My.Sale {
         
         [Composite.Data.ImmutableFieldIdAttribute("503a7c74-3fc6-40ad-aaf2-7dbd68ee443b")]
         [Composite.Data.StoreFieldTypeAttribute(Composite.Data.PhysicalStoreFieldType.String, 2048, IsNullable=true)]
-        [Composite.Data.FieldPositionAttribute(4)]
+        [Composite.Data.FieldPositionAttribute(5)]
         [Composite.Data.Validation.Validators.NullStringLengthValidatorAttribute(0, 2048)]
         [Composite.Data.ForeignKeyAttribute("Composite.Data.Types.IImageFile,Composite", AllowCascadeDeletes=true, NullableString=true)]
         string Image {
@@ -71,14 +81,12 @@ namespace My.Sale {
             set;
         }
         
-        [Composite.Data.ImmutableFieldIdAttribute("87277d00-18b0-48e5-8ae5-c6ca42a679eb")]
-        [Composite.Data.StoreFieldTypeAttribute(Composite.Data.PhysicalStoreFieldType.Guid)]
+        [Composite.Data.ImmutableFieldIdAttribute("5b4f2fb0-4ec5-4729-87d7-84b388bb59a4")]
+        [Composite.Data.StoreFieldTypeAttribute(Composite.Data.PhysicalStoreFieldType.Boolean)]
         [Microsoft.Practices.EnterpriseLibrary.Validation.Validators.NotNullValidatorAttribute()]
-        [Composite.Data.Validation.Validators.GuidNotEmptyAttribute()]
-        [Composite.Data.FieldPositionAttribute(5)]
-        [Composite.Data.DefaultFieldGuidValueAttribute("00000000-0000-0000-0000-000000000000")]
-        [Composite.Data.ForeignKeyAttribute("My.Sale.Category", AllowCascadeDeletes=true, NullReferenceValue="{00000000-0000-0000-0000-000000000000}")]
-        System.Guid Category {
+        [Composite.Data.FieldPositionAttribute(6)]
+        [Composite.Data.DefaultFieldBoolValueAttribute(false)]
+        bool IsFeatured {
             get;
             set;
         }

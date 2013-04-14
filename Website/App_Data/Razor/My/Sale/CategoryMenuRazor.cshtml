@@ -1,11 +1,11 @@
-@inherits RazorFunction
+﻿@inherits RazorFunction
 
 @functions {
     public override string FunctionDescription
     {
-        get  { return "A demo function that outputs a hello message."; }
+        get { return "A demo function that outputs a hello message."; }
     }
-     
+
     [FunctionParameter(Label = "Product List Page")]
     public DataReference<IPage> ProductListPage { get; set; }
     
@@ -16,7 +16,7 @@
 <head>
 </head>
 <body>
-    <div>
+    <div>      
         @{var categories = Data.Get<My.Sale.Category>().Where(t => t.Parent == Guid.Empty).ToList(); }
         @RecursiveCategory(categories)
     </div>
@@ -30,13 +30,13 @@
         <ul>
         @foreach (var item in categories)
         {
-            <li><a href='@Html.C1().PageUrl(@ProductListPage.Data)/@item.Id'>@(item.CategoryName)</a>
+            <li class="@((categories.IndexOf(item) == 0) ? "no-dots" : "")"><a href='@Html.C1().PageUrl(@ProductListPage.Data)/@item.Id'>@(item.CategoryName)</a>
             @{
-                var subCategories = Data.Get<My.Sale.Category>().Where(t => t.Parent == item.Id).ToList();
-                if (subCategories.Count > 0)
-                {
+            var subCategories = Data.Get<My.Sale.Category>().Where(t => t.Parent == item.Id).ToList();
+            if (subCategories.Count > 0)
+            {
                     @RecursiveCategory(subCategories);
-                }
+            }
             }
             </li>
         }

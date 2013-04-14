@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormData>
+  <ContainerLabel />
+  <FormDefinition value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#xD;&#xA;&lt;cms:formdefinition xmlns=&quot;http://www.composite.net/ns/management/bindingforms/std.ui.controls.lib/1.0&quot; xmlns:f=&quot;http://www.composite.net/ns/management/bindingforms/std.function.lib/1.0&quot; xmlns:cms=&quot;http://www.composite.net/ns/management/bindingforms/1.0&quot;&gt;&#xD;&#xA;  &lt;cms:bindings&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;FileContent&quot; type=&quot;System.String&quot; /&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;FileName&quot; type=&quot;System.String&quot; /&gt;&#xD;&#xA;    &lt;cms:binding name=&quot;FileMimeType&quot; type=&quot;System.String&quot; /&gt;&#xD;&#xA;  &lt;/cms:bindings&gt;&#xD;&#xA;  &lt;cms:layout iconhandle=&quot;razor-function-edit&quot;&gt;&#xD;&#xA;    &lt;TextEditor&gt;&#xD;&#xA;      &lt;TextEditor.MimeType&gt;&#xD;&#xA;        &lt;cms:read source=&quot;FileMimeType&quot; /&gt;&#xD;&#xA;      &lt;/TextEditor.MimeType&gt;&#xD;&#xA;      &lt;TextEditor.Label&gt;&#xD;&#xA;        &lt;cms:read source=&quot;FileName&quot; /&gt;&#xD;&#xA;      &lt;/TextEditor.Label&gt;&#xD;&#xA;      &lt;cms:bind source=&quot;FileContent&quot; /&gt;&#xD;&#xA;    &lt;/TextEditor&gt;&#xD;&#xA;  &lt;/cms:layout&gt;&#xD;&#xA;&lt;/cms:formdefinition&gt;" />
+  <CustomToolbarDefinition />
+  <ContainerType>
+    <SerializerHandler value="SerializerHandlerType='Composite\.C1Console\.Actions\.StandardUiContainerTypesSerializerHandler,Composite'SerializedObject='Document'" />
+  </ContainerType>
+  <Bindings>
+    <Dictionary type="&lt;t n=&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;  &lt;t n=&quot;System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;&lt;/t&gt;">
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="Title" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="CategoryMenuRazor.cshtml" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="FileContent" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="@inherits RazorFunction&#xA;&#xA;@functions {&#xA;    public override string FunctionDescription&#xA;    {&#xA;        get  { return &quot;A demo function that outputs a hello message.&quot;; }&#xA;    }&#xA;     &#xA;    [FunctionParameter(Label = &quot;Product List Page&quot;)]&#xA;    public DataReference&lt;IPage&gt; ProductListPage { get; set; }&#xA;    &#xA;}&#xA;&#xA;&#xA;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xA;&lt;head&gt;&#xA;&lt;/head&gt;&#xA;&lt;body&gt;&#xA;    &lt;div&gt;&#xA;        @{var categories = Data.Get&lt;My.Sale.Category&gt;().Where(t =&gt; t.Parent == Guid.Empty).ToList(); }&#xA;        @RecursiveCategory(categories)&#xA;    &lt;/div&gt;&#xA;&lt;/body&gt;&#xA;&lt;/html&gt;&#xA;&#xA;@helper RecursiveCategory(List&lt;My.Sale.Category&gt; categories)&#xA;{&#xA;    using (DataConnection Data = new DataConnection())&#xA;    {&#xA;&#x9;&#x9;&lt;div class=&quot;leftBoxContainer&quot; id=&quot;categories&quot;&gt;&#xA;&#x9;&#x9;&lt;div class=&quot;sidebox-header-left main-sidebox-header-left&quot;&gt;&#xA;&#x9;&#x9;&#x9;&lt;h3 class=&quot;leftBoxHeading main-sidebox-header-right&quot; id=&quot;categoriesHeading&quot;&gt;Categories&lt;/h3&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;div id=&quot;categoriesContent&quot; class=&quot;sideBoxContent&quot;&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;categories-top-list no-dots&quot;&gt;&lt;a class=&quot;category-top&quot; href=&quot;#=index&amp;amp;cPath=1&quot;&gt;Hardware-&amp;gt;&lt;/a&gt;&lt;span class=&quot;sub-count&quot;&gt; (6)&lt;/span&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;categories-top-list &quot;&gt;&lt;a class=&quot;category-top&quot; href=&quot;#&quot;&gt;Software-&amp;gt;&lt;/a&gt;&lt;span class=&quot;sub-count&quot;&gt; (4)&lt;/span&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;categories-top-list &quot;&gt;&lt;a class=&quot;category-top&quot; href=&quot;#&quot;&gt;DVD Movies-&amp;gt;&lt;/a&gt;&lt;span class=&quot;sub-count&quot;&gt; (17)&lt;/span&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;categories-top-list &quot;&gt;&lt;a class=&quot;category-top&quot; href=&quot;#&quot;&gt;Gift Certificates&lt;/a&gt;&lt;span class=&quot;sub-count&quot;&gt; (6)&lt;/span&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;categories-top-list &quot;&gt;&lt;a class=&quot;category-top&quot; href=&quot;#&quot;&gt;Big Linked&lt;/a&gt;&lt;span class=&quot;sub-count&quot;&gt; (24)&lt;/span&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;categories-top-list &quot;&gt;&lt;a class=&quot;category-top&quot; href=&quot;#&quot;&gt;Test Examples&lt;/a&gt;&lt;span class=&quot;sub-count&quot;&gt; (16)&lt;/span&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;categories-top-list &quot;&gt;&lt;a class=&quot;category-top&quot; href=&quot;#&quot;&gt;Free Call Stuff&lt;/a&gt;&lt;span class=&quot;sub-count&quot;&gt; (7)&lt;/span&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;categories-top-list &quot;&gt;&lt;a class=&quot;category-top&quot; href=&quot;#&quot;&gt;Music&lt;/a&gt;&lt;span class=&quot;sub-count&quot;&gt; (1)&lt;/span&gt;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;        &lt;ul&gt;&#xA;        @foreach (var item in categories)&#xA;        {&#xA;            &lt;li&gt;&lt;a href='@Html.C1().PageUrl(@ProductListPage.Data)/@item.Id'&gt;@(item.CategoryName)&lt;/a&gt;&#xA;            @{&#xA;                var subCategories = Data.Get&lt;My.Sale.Category&gt;().Where(t =&gt; t.Parent == item.Id).ToList();&#xA;                if (subCategories.Count &gt; 0)&#xA;                {&#xA;                    @RecursiveCategory(subCategories);&#xA;                }&#xA;            }&#xA;            &lt;/li&gt;&#xA;        }&#xA;        &lt;/ul&gt;&#xA;    }&#xA;}&#xA;" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="FileName" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="CategoryMenuRazor.cshtml" />
+        </Value>
+      </KeyPair>
+      <KeyPair>
+        <Key>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="FileMimeType" />
+        </Key>
+        <Value>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" value="application/x-cshtml" />
+        </Value>
+      </KeyPair>
+    </Dictionary>
+  </Bindings>
+  <BindingsValidationRules>
+    <Dictionary type="&lt;t n=&quot;System.Collections.Generic.Dictionary`2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;  &lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;    &lt;t n=&quot;Composite.Data.Validation.ClientValidationRules.ClientValidationRule,Composite&quot; /&gt;&#xD;&#xA;  &lt;/t&gt;&#xD;&#xA;&lt;/t&gt;" />
+  </BindingsValidationRules>
+  <ExcludedEvents>
+    <List type="&lt;t n=&quot;System.Collections.Generic.List`1, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;&gt;&#xD;&#xA;  &lt;t n=&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; /&gt;&#xD;&#xA;&lt;/t&gt;" />
+  </ExcludedEvents>
+</FormData>
