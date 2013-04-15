@@ -292,4 +292,18 @@
    at System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
    at System.Web.WebPages.WebPageBase.CreateInstanceFromVirtualPath(String virtualPath, IVirtualPathFactory virtualPathFactory)
    at Composite.Plugins.Functions.FunctionProviders.RazorFunctionProvider.RazorFunctionProvider.InstantiateFunction(String virtualPath, String namespace, String name)
-   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Funct
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+20130412 11:20:18.2576 40  9 Critical FunctionProviderRegistry  System.Threading.ThreadAbortException: Thread was being aborted.
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.get_Functions()
+   at Composite.Functions.Foundation.PluginFacades.FunctionProviderPluginFacade.Functions(String providerName)
+   at Composite.Functions.Foundation.FunctionContainer.OnGetFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn)
+
+20130412 11:20:18.2606 40  9 Critical FunctionProviderRegistry  System.Threading.ThreadAbortException: Thread was being aborted.
+   at Composite.Functions.Foundation.FunctionContainer.OnGetFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn)
+
+20130412 11:20:18.2636 40  9 Error FileBasedFunctionProvider  Failed to reload functions
+20130412 11:20:18.2666 40  9 Error FileBasedFunctionProvider  System.Threading.ThreadAbortException: Thread was being aborted.
+   at Composite.Functions.Foundation.FunctionContainer.OnGetFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn)
+   at Composite.Functions.Foundation.MetaFunctionContainer.InitializeFunctionsFromProvider(String providerName, FunctionTypesToReturn functionTypesToReturn, Boolean fireEvents)
+   at Composite.Functions.Foundation.MetaFunctionProviderRegistryImpl.ReinitializeFunctionFromProvider(String providerName)
+   at Composite.Plugins.Functions.FunctionProviders.FileBasedFunctionProvider.FileBasedFunctionProvider`1.ReloadFunctions()

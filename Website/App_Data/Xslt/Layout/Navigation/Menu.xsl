@@ -14,18 +14,15 @@
 			</head>
 
 			<body>
-				<div id="Menu">
-					<xsl:for-each select="$sitemap[@isopen='true']">
-						<p class="Menu">
-							<a href="{@URL}">
-								<xsl:if test="@iscurrent='true'" >
-									<xsl:attribute name="class">NavigationOpen</xsl:attribute>
-								</xsl:if>
-								<xsl:value-of select="@MenuTitle" />
-							</a>
+				<div id="tab_nav">
+				<!--<div class="top-nav-left"></div>-->
+					<div class="top-nav-right"></div>
+					<ul class="list-style-none">
+						<li class="home-link"><a href="/">Home</a></li>
+						<xsl:for-each select="$sitemap[@isopen='true']">
 							<xsl:apply-templates select="Page" />
-						</p>
-					</xsl:for-each>
+						</xsl:for-each>
+					</ul>
 				</div>
 			</body>
 		</html>
@@ -33,12 +30,13 @@
 
 	<xsl:template match="Page">
 		<xsl:if test="count(@MenuTitle)">
-			<a href="{@URL}">
+			<li>
 				<xsl:if test="@isopen='true'" >
-					<xsl:attribute name="class">NavigationOpen</xsl:attribute>
+					<xsl:attribute name="id">tab_active</xsl:attribute>
 				</xsl:if>
+				<a href="{@URL}">
 				<xsl:value-of select="@MenuTitle" />
-			</a>
+				</a></li>
 		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>
